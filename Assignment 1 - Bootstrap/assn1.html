@@ -1,0 +1,97 @@
+
+<!DOCTYPE HTML>
+<html manifest = "assn1.appcache">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../../favicon.ico">
+    <!-- Bootstrap core CSS -->
+    <link href="dist/css/bootstrap.css" rel="stylesheet">
+	
+	
+<!-- Andrew's Work begins here!-->
+    <title>Assignment 1 - Andrew Magnus</title>
+    <script src ="https://maps.googleapis.com/maps/api/js?v=3.exp"></script>
+    <script src = "googleMaps.js">
+	</script>
+	</head>
+	<style>
+		html{height:100%;}
+		body{height:100%;}
+		.container-fluid{height:100%;}
+		#mapRow{height:100%;}
+		#map{height:100%;}
+		.sidebar-item{text-align:center;}
+	</style>
+    <body style = "background-color:skyblue;">
+		<div class= "container-fluid">
+			<div class="row" id = "mapRow">
+			<!--Map holder DIV-->
+			<div id="map" class = "col-md-10"></div>
+			<!--sidebar-->
+			<div class = "col-md-2" style = "background-color: skyblue" id = "sidebar">
+				<!--display longtude latitude-->
+				<div class = "sidebar-item">
+					<h1 style = "text-align: center;"> Andrew Magnus Assignment 1 </h1>
+				</div>
+				<div id="modeSelect" style = "text-align:center;" class = "sidebar-item">
+					<strong>Mode of Travel: </strong>
+					<select id="mode" onchange="changeTravelMode();">
+					<option value="WALKING">Walking</option>
+					<option value="BICYCLING">Bicycling</option>
+					</select>
+				</div>
+				<div class = "sidebar-item">
+					<input id="starting" type="text" placeholder = "enter your starting location" size="30">
+				</div>
+				<div class = "sidebar-item">
+					<input id="dest" type="text" placeholder = "enter destination" size="30">
+				</div >
+				<div class = "sidebar-item">
+					<input type="button" onclick="geocodeAndCalc();" value="Show the way" >
+				</div>
+				<div class = "sidebar-item">
+					 <label for="startLat">Starting Location Latitude:</label>
+					 <br>
+					 <input id="startLat" type="text">
+					 <br>
+					 <label for="startLong">Starting Location Longitude:</label>
+					 <br>
+					 <input id="startLong" type="text">
+				</div>
+				<div class = "sidebar-item">
+					 <label for="endLat">Destination Latitude:</label>
+					 <br>
+					 <input id="endLat" type="text">
+					 <br>
+					 <label for="endLogn">Destination Longitude:</label>
+					 <br>
+					 <input id="endLong" type="text">
+				</div>
+				<div class = "sidebar-item">
+					<input type="button" onclick="trackPath()" value="Track Path">
+				</div>
+				<div id="latlong" class = "sidebar-item">
+					<p id ="DisplayLatLong"></p>
+				</div>
+				<div class = "sidebar-item">
+					<p id ="currentLoc"></p>
+				</div>
+				<div class = "sidebar-item">
+					<p id ="displaydistance"></p>
+				</div>
+				<div class = "sidebar-item">
+					<p id ="betweenCurrStart"></p>
+				</div>
+				<div class = "sidebar-item">
+					<p id ="betweenCurrDest"></p>
+				</div>
+			</div>
+			</div>
+		</div>
+		</div>
+    </body>
+</html>
