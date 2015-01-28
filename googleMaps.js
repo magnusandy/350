@@ -101,9 +101,9 @@ amm215
 				  var displayDistance = document.getElementById("displaydistance") ;
 			  displayDistance.innerHTML = "<strong>Route Distance:</strong> "+ (response.routes[0].legs[0].distance.value+response.routes[0].legs[1].distance.value)/1000 + " km";
 			  document.getElementById("betweenCurrStart").innerHTML = "<strong>Distance From Start:</strong>" + 
-				(response.routes[0].legs[1].distance.value/1000).toFixed(2) + " km";
-			document.getElementById("betweenCurrDest").innerHTML = "<strong>Distance To Destination:</strong>" +
 				(response.routes[0].legs[0].distance.value/1000).toFixed(2) + " km";
+			document.getElementById("betweenCurrDest").innerHTML = "<strong>Distance To Destination:</strong>" +
+				(response.routes[0].legs[1].distance.value/1000).toFixed(2) + " km";
 
 				  directionsDisplay.setDirections(response);
 				  
