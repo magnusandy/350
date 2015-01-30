@@ -107,6 +107,9 @@ amm215
 
 				  directionsDisplay.setDirections(response);
 				  
+				}else //Print the EXACT CAUSE OF ERROR
+				{
+				alert("Direction Lookup failed because of \"" +status+"\"");
 				}
 			  });
 			  
