@@ -1,4 +1,8 @@
-
+<!--
+Andrew Magnus
+amm215
+11140881
+-->
 <!DOCTYPE HTML>
 <html manifest = "assn1.appcache">
   <head>
@@ -35,6 +39,7 @@
 				<div class = "sidebar-item">
 					<h1 style = "text-align: center;"> Andrew Magnus Assignment 1 </h1>
 				</div>
+				<!--Selector for walking or biking-->
 				<div id="modeSelect" style = "text-align:center;" class = "sidebar-item">
 					<strong>Mode of Travel: </strong>
 					<select id="mode" onchange="changeTravelMode();">
@@ -42,15 +47,19 @@
 					<option value="BICYCLING">Bicycling</option>
 					</select>
 				</div>
+				<!--Starting address input-->
 				<div class = "sidebar-item">
 					<input id="starting" type="text" placeholder = "enter your starting location" size="30">
 				</div>
+				<!--destination address input-->
 				<div class = "sidebar-item">
 					<input id="dest" type="text" placeholder = "enter destination" size="30">
 				</div >
+				<!--Show the way button-->
 				<div class = "sidebar-item">
 					<input type="button" onclick="geocodeAndCalc();" value="Show the way" >
 				</div>
+				<!--Starting LatLong inputs-->
 				<div class = "sidebar-item">
 					 <label for="startLat">Starting Location Latitude:</label>
 					 <br>
@@ -60,6 +69,7 @@
 					 <br>
 					 <input id="startLong" type="text">
 				</div>
+				<!--Destination LatLong inputs-->
 				<div class = "sidebar-item">
 					 <label for="endLat">Destination Latitude:</label>
 					 <br>
@@ -69,9 +79,11 @@
 					 <br>
 					 <input id="endLong" type="text">
 				</div>
+				<!--Track Path button-->
 				<div class = "sidebar-item">
 					<input type="button" onclick="trackPath()" value="Track Path">
 				</div>
+				<!--Various Display paragraphs for current location, route distance, etc-->
 				<div id="latlong" class = "sidebar-item">
 					<p id ="DisplayLatLong"></p>
 				</div>
